@@ -1,0 +1,107 @@
+/* Basics & sitewide */
+
+* {
+  /* this applies border-box to all elements */
+  /* which means padding is included in the element size */
+  /* this will become useful later */
+  box-sizing: border-box;
+}
+
+div.container {
+  margin: 0 auto;
+  padding: 0 30px;
+  max-width: 1600px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Unbounded', cursive;
+}
+
+/* Header */
+
+header {
+  padding: 30px 0;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a.logo {
+  color: white;
+  font-size: 24px;
+  font-weight: 900;
+  text-decoration: none;
+}
+
+header ul {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+
+header ul li {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+header ul li a {
+  display: block;
+  padding: 10px;
+  color: white;
+  font-size: 18px;
+  font-weight: 300;
+  text-decoration: none;
+}
+
+/* Intro Image */
+
+div.intro-image {
+  display: block;
+  position: relative;
+}
+
+div.intro-image div.container {
+  position: relative;
+}
+
+div.intro-image img.image {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  border-radius: 40px;
+}
+
+@keyframes spinner {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+div.intro-image img.element {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  left: 175px;
+  bottom: -175px;
+  animation: spinner 20s infinite linear;
+}
+
+div.intro-text h2 {
+  color: white;
+  display: block;
+  font-size: 40px;
+  text-align: right;
+  max-width: 860px;
+  margin: 30px 0 0 auto;
+}
